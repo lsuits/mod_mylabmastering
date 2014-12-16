@@ -70,7 +70,8 @@ class mod_mylabmastering_mod_form extends moodleform_mod {
         	}
         	else {
 	    		$mform->addElement('header', 'moduleheader', 'Module settings');
-	    	    $mform->addElement('static','info','',get_string('mylabmastering_blocknotconfigured', 'block_mylabmastering'));
+	    	    $mform->addElement('static','info','',get_string('mylabmastering_notconfigured', 'mod_mylabmastering'));
+
 		        // add standard elements, common to all modules
 		        $this->standard_coursemodule_elements();        
 		        // add standard buttons, common to all modules
@@ -79,7 +80,8 @@ class mod_mylabmastering_mod_form extends moodleform_mod {
     	}
     	else {
     		$mform->addElement('header', 'moduleheader', 'Module settings');
-    	    $mform->addElement('static','info','',get_string('mylabmastering_notconfigured', 'block_mylabmastering'));
+    	    $mform->addElement('static','info','',get_string('mylabmastering_notconfigured', 'mod_mylabmastering'));
+                        $mform->addElement('static','info', format_text('<p>Use the <a href="'.$CFG->wwwroot."/mod/lti/view.php?l=".$mm_tools_id.'" >Pearson MyLab & Mastering Tools link</a> to get started.</p>', FORMAT_HTML));
 	        // add standard elements, common to all modules
 	        $this->standard_coursemodule_elements();        
 	        // add standard buttons, common to all modules

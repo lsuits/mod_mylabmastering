@@ -71,8 +71,8 @@ function mylabmastering_add_instance($mm, $mform) {
 	$ltilink->name = $linkname;
 	
 	$ltilink->timecreated = time();
-    $ltilink->timemodified = $ltilink->timecreated;
-    $ltilink->typeid = 0;
+        $ltilink->timemodified = $ltilink->timecreated;
+        $ltilink->typeid = 0;
 	$ltilink->toolurl = $templatelink->baseurl;
 	if (strpos($ltilink->toolurl, 'https') === 0) {
 		$ltilink->instructorchoicesendname = 1;
@@ -98,7 +98,7 @@ function mylabmastering_add_instance($mm, $mform) {
 		
 	$use_icons = $CFG->mylabmastering_use_icons;
 	if ($use_icons) {
-		$ltilink->icon = $CFG->wwwroot.'/blocks/mylabmastering/pix/icon.jpg';
+		$ltilink->icon = $CFG->wwwroot.'/mod/mylabmastering/pix/icon.svg';
 	}	
 	
 	$ltilink->id = $DB->insert_record('lti', $ltilink);
@@ -124,7 +124,7 @@ function mylabmastering_add_instance($mm, $mform) {
 	$cm->showdescription = 0;
 	$cm->coursemodule = $mm->coursemodule;
 	$cm->id = $mm->coursemodule;
-	
+
 	$sectionid = course_add_cm_to_section($cm->course, $cm->coursemodule, $cm->section, null);
 	$DB->update_record("course_modules", $cm);
 	$DB->set_field("course_modules", "section", $sectionid, array("id" => $cm->coursemodule));

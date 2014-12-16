@@ -13,8 +13,9 @@
 defined('MOODLE_INTERNAL') || die;
 
 $string['pluginname'] = 'Pearson MyLab & Mastering (Mod)';
-$string['modulename'] = 'Pearson MyLab & Mastering Link';
-$string['modulenameplural'] = 'Pearson MyLab & Mastering Links';
+$string['modulename'] = 'Pearson Link';
+$string['modulenameplural'] = 'Pearson Links';
+$string['mylabmastering_notconfigured'] = 'Pearson module is not configured.';
 $string['addlinkheader'] = 'Add a link';
 $string['selectedlink'] = 'Available links';
 $string['linktitle'] = 'Change link title';
